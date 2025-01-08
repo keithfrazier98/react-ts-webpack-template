@@ -4,19 +4,23 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginJest from "eslint-plugin-jest";
-import pluginPrettier from "eslint-plugin-prettier";
+import pluginPrettier from "eslint-plugin-prettier/recommended";
 // TODO: import checkFile from 'eslint-plugin-check-file';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
+  { ignores: ["**/node_modules/**", "**/dist/**", "webpack.config.js"] },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  pluginPrettier.configs.recommended,
+  pluginReact.configs.flat["jsx-runtime"],
+  pluginPrettier,
   jsxA11y.flatConfigs.recommended,
-  pluginJest.configs.recommended,
+  {
+    files: ["**/__tests__/"],
+    ...pluginJest.configs["flat/recommended"],
+  },
   // TODO: checkFile
   // {
   //   files: ["src/**/*"],
@@ -34,10 +38,6 @@ export default [
   //     ],
   //     "check-file/folder-match-with-fex": [
   //       "error",
-  //       {
-  //         "*.test.{js,jsx,ts,tsx}": "**/__tests__/",
-  //         "*.styled.{jsx,tsx}": "**/pages/",
-  //       },
   //     ],
   //     "check-file/filename-naming-convention": [
   //       "error",

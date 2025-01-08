@@ -6,7 +6,10 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "husky",
+    "format": "prettier . --write",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +26,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.3",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "prettier": "3.4.2",
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2",
