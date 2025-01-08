@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack serve --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Tests TBD\"",
     "postinstall": "husky",
     "format": "prettier . --write",
     "lint:fix": "eslint --fix"
