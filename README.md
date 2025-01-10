@@ -1,6 +1,6 @@
 # React Template 
 
-Barebones started template, should be able to clone and get started. 
+Barebones starter template, should be able to clone and get started. 
 
 - Webpack
 - Typescript
