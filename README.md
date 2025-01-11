@@ -12,4 +12,3 @@ Barebones starter template, should be able to clone and get started.
 Todo: 
 
 - Eslint fileCheck
-- Webpack hot reloads
