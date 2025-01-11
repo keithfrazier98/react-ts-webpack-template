@@ -10,8 +10,9 @@ import pluginPrettier from "eslint-plugin-prettier/recommended";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  { ignores: ["**/node_modules/**", "**/dist/**", "webpack.config.js"] },
+  { ignores: ["**/node_modules/**", "**/dist/**", "webpack.config.js", 'babel.config.js'] },
   { languageOptions: { globals: globals.browser } },
+  { settings: {} },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat["jsx-runtime"],

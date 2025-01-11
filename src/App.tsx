@@ -5,7 +5,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>Hello, React with TypeScript and Webpack!</h1>
+      <h1>Hello, React with😄 TypeScript and Webpack, and HMR!!!!!</h1>
     </div>
   );
 };
