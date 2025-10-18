@@ -23,7 +23,7 @@
     "@types/react-dom": "^19.0.2",
     "babel-loader": "^9.2.1",
     "eslint": "^9.38.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-check-file": "^2.8.0",
     "eslint-plugin-jest": "^28.10.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
